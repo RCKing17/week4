@@ -1,0 +1,13 @@
+<form #leform="ngForm" (ngSubmit)="onSubmit(leform)">
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" ngModel class="form-control" id="email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" ngModel class="form-control" id="password" name="password" required>
+  </div>
+  <button type="submit" class="btn btn-primary" >Login</button>
+  <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+</form>
+
